@@ -3,4 +3,4 @@
 REPO=https://github.com/nahamsec/test
 STATUS=$(curl -sI $REPO | head -n 1 | cut -d$' ' -f2)
 
-if [ STATUS == '200' ] && echo "$REPO is public";
+if [ STATUS = '200' ] && echo "$REPO is public";
