@@ -1,6 +1,12 @@
-!#/bin/sh
+#!/bin/bash
 
-REPO=https://github.com/nahamsec/test
-STATUS=$(curl -sI $REPO | head -n 1 | cut -d$' ' -f2)
+REMOTE=$(git config --get remote.origin.url);
+REPO=$(echo "$REMOTE" | sed 's/\.git//');
 
-if [ STATUS = '200' ] && echo "$REPO is public";
+if [[ "$REPO" == *"@"* ]]; then
+  REPO=$(echo "$REMOTE" | awk -F @ '{ print $2 }' | sed 's/:/\//');
+fi;
+
+STATUS=$(curl -sI "$REPO" | head -n 1 | cut -d ' ' -f2);
+[ "$STATUS" = '200' ] && echo -e "$REPO is \e[41m public \e[0m";
+
