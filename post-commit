@@ -1,8 +1,6 @@
 !#/bin/sh
 
 REPO=https://github.com/nahamsec/test
-STATUS=$(curl -I $REPO | head -n 1 | cut -d$' ' -f2)
+STATUS=$(curl -sI $REPO | head -n 1 | cut -d$' ' -f2)
 
-if [ STATUS == '200' ]
-  echo "$REPO is public"
-fi;
+if [ STATUS == '200' ] && echo "$REPO is public";
