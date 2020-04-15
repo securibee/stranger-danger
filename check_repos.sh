@@ -11,10 +11,11 @@ for i in $(find $1 -name ".git"); do
   REPO=$(echo "$REMOTE" | sed 's/\.git//');
 
   if [[ "$REPO" == *"@"* ]]; then
-    REPO=$(echo "$REMOTE" | awk -F @ '{ print $2 }' | sed 's/:/\//' | sed 's/\.git//');
+    REPO=$(echo "$REMOTE" | awk -F @ '{ print $2 }' | sed 's/:/\//' | sed 's/\.git//' | sed -e 's/^/https:\/\//');
   fi;
 
   STATUS=$(curl -sI "$REPO" | head -n 1 | cut -d ' ' -f2);
+
   if [ "$STATUS" = '200' ]; then
     echo -e "$REPO is \e[31mpublic \e[0m";   
   else
