@@ -32,4 +32,6 @@ Run the install-post-commit.sh script and it'll set up global hooks.
 ./install-post-commit.sh
 ```
 
+After each commit you'll be warned if the working repository is set to public.
+
 Note that the hook will trigger on every commit. It'll also set your global hooks path to `$HOME/.git/hooks`
