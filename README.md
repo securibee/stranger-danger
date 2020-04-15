@@ -4,8 +4,8 @@ Two solutions, a bash script and a git hook, to help you keep tabs on your repos
 
 ## Getting started
 
-The idea for these solutions came from a friend who didn't realize that one of their repositories was set to public.
-I also find myself double checking privileges from time to time.
+What sparked this idea was a friend that didn't realize a repo was set to public instead of private.
+I also find myself manually checking privileges on repositories from time to time which is now automated.
 
 ### Solution 1: Check local repositories
 
