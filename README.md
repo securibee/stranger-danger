@@ -1,6 +1,6 @@
 # Stranger Danger
 
-Two solutions to help you keep tabs on your repository privileges.
+Two solutions, a bash script and a git hook, to help you keep tabs on your repository privileges.
 
 ## Getting started
 
