@@ -9,8 +9,7 @@ I also find myself double checking privileges from time to time.
 
 ### Solution 1: Check local repositories
 
-A bash script that you can pass a directory that contains your git repositories.
-It'll then check if their privileges are set to private or public.
+A bash script that you can pass a (parent) git directory. It'll then check if their privileges are set to private or public.
 
 #### Usage
 Run the script and pass it a directory:
