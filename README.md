@@ -1,13 +1,13 @@
 # Stranger Danger
 
-Two tools to help you keep tabs on your repository privileges.
+Two solutions to help you keep tabs on your repository privileges.
 
 ## Getting started
 
-The idea for these tools came from a friend who didn't realize that one of their repositories was set to public.
+The idea for these solutions came from a friend who didn't realize that one of their repositories was set to public.
 I also find myself double checking privileges from time to time.
 
-### Tool 1: Check local repositories
+### Solution 1: Check local repositories
 
 A bash script that you can pass a directory that contains your git repositories.
 It'll then check if their privileges are set to private or public.
@@ -21,7 +21,7 @@ Run the script and pass it a directory:
 
 The output will show you if your repo(s) are private or public.
 
-### Tool 2: Git post commit hook 
+### Solution 2: Git post commit hook 
 
 We can perform an action using git's post commit hook. In this case it'll check the privileges of your working repository.
 
