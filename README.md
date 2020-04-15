@@ -16,7 +16,7 @@ It'll then check if their privileges are set to private or public.
 Run the script and pass it a directory:
 
 ```
-./check_repos ~/my-git-dir
+./check_repos.sh ~/my-git-dir
 ```
 
 The output will show you if your repo(s) are private or public.
